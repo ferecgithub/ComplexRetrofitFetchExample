@@ -38,7 +38,7 @@ class Converters {
 
     @TypeConverter
     fun toChildren(value: String): List<Children> {
-        return Gson().fromJson(value, Children::class.java)
+        return Gson().fromJson(value, Data1::class.java).children.toList()
     }
 
 
